@@ -84,8 +84,7 @@ export default class App extends Component {
   
   render() {
     const { handleSubmit, LoadMore, closeModal, openModal } = this;
-    const { images, error, loading, modalOpen, modalContent } = this.state;
-    const { search } = this.state;
+    const { images, loading, modalOpen, modalContent } = this.state;
     return (
       <>
         {modalOpen && <Modal closeModal={closeModal}>
