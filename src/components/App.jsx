@@ -88,7 +88,7 @@ export default class App extends Component {
     return (
       <>
         {modalOpen && <Modal closeModal={closeModal}>
-          <img src={modalContent}></img>
+          <img src={modalContent} alt=""></img>
         </Modal>}
         <Searchbar onSubmit={handleSubmit} />
         {images.length !== 0 && <ImageGallery onClick={openModal} data={images} />}
