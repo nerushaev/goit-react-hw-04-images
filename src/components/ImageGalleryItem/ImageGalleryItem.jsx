@@ -1,4 +1,5 @@
 import propTypes from 'prop-types'
+import './ImageGalleryItem.css'
 
 export const ImageGalleryItem = ({ data, onClick }) => {
   const elements = data.map(({ id, webformatURL, largeImageURL }) => {

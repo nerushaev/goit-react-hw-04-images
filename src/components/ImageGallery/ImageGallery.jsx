@@ -1,5 +1,6 @@
 import { ImageGalleryItem } from "../ImageGalleryItem/ImageGalleryItem"
 import propTypes from 'prop-types'
+import './ImageGallery.css'
 
 export const ImageGallery = ({ data, onClick }) => {
   return (

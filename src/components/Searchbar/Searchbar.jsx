@@ -1,4 +1,5 @@
 import propTypes from 'prop-types'
+import './Searchbar.css'
 
 export default function Searchbar({ onSubmit}) {
     return (

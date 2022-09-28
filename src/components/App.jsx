@@ -1,11 +1,11 @@
-import Searchbar from "./Searchbar/Searchbar/Searchbar";
-import { searchImages } from "./Searchbar/API/API";
-import './Searchbar/styles.css';
+import Searchbar from "./Searchbar/Searchbar";
+import { searchImages } from "../API/API";
+import './App.css';
 import React, { Component } from 'react'
-import { ImageGallery } from "./Searchbar/ImageGallery/ImageGallery";
-import { Button } from "./Searchbar/Button/Button";
-import { Loader } from "./Searchbar/Loader/Loader";
-import Modal from "./Searchbar/Modal/Modal";
+import { ImageGallery } from "./ImageGallery/ImageGallery";
+import { Button } from "./Button/Button";
+import { Loader } from "./Loader/Loader";
+import Modal from "./Modal/Modal";
 
 export default class App extends Component {
     state = {
