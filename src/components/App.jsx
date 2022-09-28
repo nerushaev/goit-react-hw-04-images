@@ -55,7 +55,8 @@ export default class App extends Component {
     if (value.length !== 0 && value !== this.state.search) {
       this.setState({
       [name]: value,
-      images: []
+        images: [],
+        page: 1
     })
     }
   }
@@ -92,7 +93,7 @@ export default class App extends Component {
         </Modal>}
         <Searchbar onSubmit={handleSubmit} />
         {images.length !== 0 && <ImageGallery onClick={openModal} data={images} />}
-        {images.length !== 0 && <Button onClick={LoadMore} />}
+        {images.length >= 12 && <Button onClick={LoadMore} />}
         {loading && <Loader />}
       </>
   )
