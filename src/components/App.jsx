@@ -24,6 +24,7 @@ export default class App extends Component {
       this.fetchImages(search, page)
     }
   }
+
   
   async fetchImages() {
     const { search, page } = this.state;
@@ -85,7 +86,9 @@ export default class App extends Component {
   
   render() {
     const { handleSubmit, LoadMore, closeModal, openModal } = this;
-    const { images, loading, modalOpen, modalContent } = this.state;
+    const { images, loading, modalOpen, modalContent, page } = this.state;
+    const isLoadMoreButton = (Math.ceil(images.length / page) === 12);
+
     return (
       <>
         {modalOpen && <Modal closeModal={closeModal}>
@@ -93,7 +96,7 @@ export default class App extends Component {
         </Modal>}
         <Searchbar onSubmit={handleSubmit} />
         {images.length !== 0 && <ImageGallery onClick={openModal} data={images} />}
-        {images.length >= 12 && <Button onClick={LoadMore} />}
+        {isLoadMoreButton && <Button onClick={LoadMore} />}
         {loading && <Loader />}
       </>
   )
