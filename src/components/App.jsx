@@ -87,7 +87,7 @@ export default class App extends Component {
   render() {
     const { handleSubmit, LoadMore, closeModal, openModal } = this;
     const { images, loading, modalOpen, modalContent, page } = this.state;
-    const isLoadMoreButton = (Math.ceil(images.length / page) === 12);
+    const isLoadMoreButton = ((images.length / page) === 12);
 
     return (
       <>
