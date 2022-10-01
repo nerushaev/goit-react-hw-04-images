@@ -59,7 +59,6 @@ export default function App() {
   }
 
   const isLoadMoreButton = ((images.length / page) === 12);
-  console.log(error);
 
   return (
       <>
@@ -70,7 +69,8 @@ export default function App() {
         {images.length !== 0 && <ImageGallery onClick={openModal} data={images} />}
         {isLoadMoreButton && <Button onClick={LoadMore} />}
         {loading && <Loader />}
-        {images.length === 0 && <ErrorMessage />}
+      {images.length === 0 && <ErrorMessage />}
+      {error && <p>{error}</p>}
       </>
   )
 };
