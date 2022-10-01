@@ -59,6 +59,7 @@ export default function App() {
   }
 
   const isLoadMoreButton = ((images.length / page) === 12);
+  console.log(error);
 
   return (
       <>

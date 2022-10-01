@@ -1,4 +1,3 @@
-import { nanoid } from 'nanoid'
 import propTypes from 'prop-types'
 import './ImageGalleryItem.css'
 

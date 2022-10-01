@@ -10,7 +10,7 @@ const Modal = ({closeModal, children}) => {
   useEffect(() => {
     document.addEventListener("keydown", onClose);
     return () => {
-      document.removeEventListener("keydown", onClose);
+    document.removeEventListener("keydown", onClose);
     };
   }, []);
 
