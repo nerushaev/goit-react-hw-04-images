@@ -1,4 +1,4 @@
-import { ImageGalleryItem } from "../ImageGalleryItem/ImageGalleryItem"
+import ImageGalleryItem from "../ImageGalleryItem/ImageGalleryItem"
 import propTypes from 'prop-types'
 import './ImageGallery.css'
 
