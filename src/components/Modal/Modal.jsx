@@ -5,20 +5,20 @@ import './Modal.css'
 
 const modalRoot = document.getElementById("modal-root");
 
-const Modal = ({closeModal, children}) => {
+const Modal = ({ closeModal, children }) => {
+
+    const onClose = ({ target, currentTarget, code }) => {
+    if (target === currentTarget || code === "Escape") {
+      closeModal();
+    }
+  }
 
   useEffect(() => {
     document.addEventListener("keydown", onClose);
     return () => {
     document.removeEventListener("keydown", onClose);
     };
-  }, [onClose]);
-
-  const onClose = ({ target, currentTarget, code }) => {
-    if (target === currentTarget || code === "Escape") {
-      closeModal();
-    }
-  }
+  });
 
     return createPortal(
     <div onClick={onClose} className="Overlay">
