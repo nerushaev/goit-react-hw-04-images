@@ -6,7 +6,6 @@ import { ImageGallery } from "./ImageGallery/ImageGallery";
 import { Button } from "./Button/Button";
 import { Loader } from "./Loader/Loader";
 import Modal from "./Modal/Modal";
-import ErrorMessage from "./ErrorMessage/ErrorMessage";
 
 export default function App() {
   const [images, setImages] = useState([]);
@@ -69,7 +68,6 @@ export default function App() {
         {images.length !== 0 && <ImageGallery onClick={openModal} data={images} />}
         {isLoadMoreButton && <Button onClick={LoadMore} />}
         {loading && <Loader />}
-      {images.length === 0 && <ErrorMessage />}
       {error && <p>{error}</p>}
       </>
   )
